@@ -1,47 +1,84 @@
 /*Import Roboto font*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+/*Animations*/
+@keyframes color-change {
+  from {fill: #edc655;}
+  to {fill: #f76414;}
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(446px,48px);}
+  to {transform: translate(100px, 48px);}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
 @media only screen and (min-width: 640px) {
- header {
-   text-align: unset;
-   padding: 20px 0 13px;
- }
+  header {
+    text-align: unset;
+    padding: 20px 0 13px;
+  }
 
- nav {
-   width: auto;
-   float: right;
-   margin-top: 4px;
- }
+  nav {
+    width: auto;
+    float: right;
+    margin-top: 4px;
+  }
 
- body {
-   font-size: 18px;
- }
+  body {
+    font-size: 18px;
+  }
 
- .col-md-6 {
-  width: 50%;
-}
+  .col-md-6 {
+    width: 50%;
+  }
 
-[class*="col-"] {
-  float: left;
-  padding: 10px;
-}
-
+  [class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
 }
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .col-lg-7 {
+    width: 40%;
+    height: 60%;
+  }
+
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {
-}
+@media only screen and (min-width: 1440px) {}
 
 /*
 Colors used:
@@ -49,19 +86,18 @@ Primary Color: #769FCD;
 Secondary Color: #B9D7EA;
 Background Color: #F7FBFC;
 */
-
 * {
   box-sizing: border-box;
 }
 
 /* Layout styling */
-
 .container {
   padding: 0 15px;
 }
 
 .row {
-  margin: 25px 0; /* 25px top and bottom, 0 left and right */
+  margin: 25px 0;
+  /* 25px top and bottom, 0 left and right */
 }
 
 .row::after {
@@ -70,11 +106,14 @@ Background Color: #F7FBFC;
   display: table;
 }
 
-
-#work .row { padding-bottom: 25px; border-bottom: 1px solid #4a4a4a; }
+#work .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #4a4a4a;
+}
 
 #hero h1 {
-  text-align: center; /* Centers text */
+  text-align: center;
+  /* Centers text */
 }
 
 .logo {
@@ -83,7 +122,6 @@ Background Color: #F7FBFC;
 }
 
 /*Styles*/
-
 header {
   background-color: #B9D7EA;
   text-align: center;
@@ -99,16 +137,16 @@ nav {
   width: 100%;
 }
 
-nav > ul {
+nav>ul {
   list-style-type: none;
   padding: 0;
 }
 
-nav > ul > li {
+nav>ul>li {
   display: inline-block;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -131,7 +169,9 @@ main {
   display: block;
 }
 
-#about-page h3 { margin-top: 0;}
+#about-page h3 {
+  margin-top: 0;
+}
 
 body {
   background-color: #F7FBFC;
@@ -145,6 +185,7 @@ body {
 h1, h2, h3, h4 {
   line-height: 1.4;
 }
+
 h1 {
   font-size: 2.75em;
   font-weight: 700;
@@ -159,12 +200,20 @@ h3 {
   font-size: 1.75em;
   font-weight: 400;
 }
+
 h4 {
   font-size: 1.35em;
   font-weight: 400;
 }
+
 img {
   width: 100%;
+}
+
+.berlin-illustration {
+  width: 100%;
+max-width: 100%;
+height: auto;
 }
 
 /*Links and buttons*/
@@ -172,6 +221,7 @@ a {
   color: #769FCD;
   text-decoration: none;
 }
+
 a:hover {
   color: #769FCD;
   text-decoration: underline;
@@ -190,7 +240,7 @@ a:active {
   padding: 10px;
   border-radius: 3px;
   border: 2px solid #769FCD;
-  transition: 0.2s opacity;
+  transition: opacity 0.2s;
   box-shadow: 2px 2px 6px 0px rgba(40, 40, 40, 0.5);
 }
 
