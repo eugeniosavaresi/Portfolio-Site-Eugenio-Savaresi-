@@ -3,18 +3,33 @@
 
 /*Animations*/
 @keyframes color-change {
-  from {fill: #edc655;}
-  to {fill: #f76414;}
+  from {
+    fill: #edc655;
+  }
+
+  to {
+    fill: #f76414;
+  }
 }
 
 @keyframes cloud-move {
-  from {transform: translate(0,50px);}
-  to {transform: translate(200px,50px);}
+  from {
+    transform: translate(0, 50px);
+  }
+
+  to {
+    transform: translate(200px, 50px);
+  }
 }
 
 @keyframes cloud-move-reverse {
-  from {transform: translate(446px,48px);}
-  to {transform: translate(100px, 48px);}
+  from {
+    transform: translate(446px, 48px);
+  }
+
+  to {
+    transform: translate(100px, 48px);
+  }
 }
 
 .sun {
@@ -29,6 +44,11 @@
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
+@media only screen and (min-width: 0px) {
+  .navtoggle li:not(:last-child) {
+    display: none;
+  }
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -37,21 +57,39 @@ Medium devices (640px and larger)
     text-align: unset;
     padding: 20px 0 13px;
   }
-/*nuovo*/
-  header > div {
+
+  .logo {
+    max-width: 150px;
+    text-align: center;
+    /*nuovo sotto due righe*/
+    display: inline-block;
+    padding-top: 20px;
+  }
+
+  /*nuovo*/
+  header>div {
     max-width: 1200px;
     margin: 0 auto;
   }
 
-header .container {
-   display: flex;
-  justify-content: space-between;
- }
- /*fine nuovo*/
+  header .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav>ul>li {
+    display: inline-block;
+  }
+
+  /*fine nuovo*/
   nav {
     width: auto;
     float: right;
     margin-top: 4px;
+  }
+
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
   }
 
   body {
@@ -83,12 +121,20 @@ Large devices (1024px or larger)
     height: 60%;
   }
 
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+
 }
 
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
-@media only screen and (min-width: 1440px) {}
+@media only screen and (min-width: 1440px) {
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+}
 
 /*
 Colors used:
@@ -102,7 +148,8 @@ Background Color: #F7FBFC;
 
 /* Layout styling */
 .container {
-  padding: 0 15px; /*nuovo sotto due righe*/
+  padding: 0 15px;
+  /*nuovo sotto due righe*/
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -128,7 +175,8 @@ Background Color: #F7FBFC;
 
 .logo {
   max-width: 250px;
-  text-align: center; /*nuovo sotto due righe*/
+  text-align: center;
+  /*nuovo sotto due righe*/
   display: inline-block;
   padding-top: 20px;
 }
@@ -144,18 +192,13 @@ header {
   width: 100%;
 }
 
-/* tolto da anson nav {
+/* tolto da anil nav {
   display: inline-block;
   width: 100%;
 } */
-
 nav>ul {
   list-style-type: none;
   padding: 0;
-}
-
-nav>ul>li {
-  display: inline-block;
 }
 
 nav>ul>li>a {
@@ -165,8 +208,25 @@ nav>ul>li>a {
   color: #000000;
 }
 
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  font-size: 20px;
+  padding-right: 0;
+}
+
+.navtoggle.responsive li  {
+  display: block;
+}
+
 main {
-  padding-top: 73px; /*era 103*/
+  padding-top: 73px;
+  /*era 103*/
 }
 
 #hero {
@@ -224,8 +284,8 @@ img {
 
 .berlin-illustration {
   width: 100%;
-max-width: 100%;
-height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /*Links and buttons*/
