@@ -49,6 +49,14 @@
     display: none;
   }
 
+  .logo {
+    padding-top: 5px;
+  }
+  main {
+    padding-top: 53px;
+  }
+}
+
 /* ==============================
 Medium devices (640px and larger)
 ================================= */
@@ -81,6 +89,10 @@ Medium devices (640px and larger)
     display: inline-block;
   }
 
+  nav>ul>li:last-child {
+    display: none;
+  }
+
   /*fine nuovo*/
   nav {
     width: auto;
@@ -104,6 +116,12 @@ Medium devices (640px and larger)
     float: left;
     padding: 10px;
   }
+
+  main {
+  padding-top: 73px;
+  /*era 103*/
+}
+
 }
 
 /* ==============================
@@ -178,7 +196,6 @@ Background Color: #F7FBFC;
   text-align: center;
   /*nuovo sotto due righe*/
   display: inline-block;
-  padding-top: 20px;
 }
 
 /*Styles*/
@@ -209,6 +226,9 @@ nav>ul>li>a {
 }
 
 .navtoggle, .navtoggle.responsive {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
   position: relative;
 }
 
@@ -222,11 +242,6 @@ nav>ul>li>a {
 
 .navtoggle.responsive li  {
   display: block;
-}
-
-main {
-  padding-top: 73px;
-  /*era 103*/
 }
 
 #hero {
