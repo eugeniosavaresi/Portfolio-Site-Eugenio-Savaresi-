@@ -1,7 +1,7 @@
-/*Import Roboto font*/
+/* Import Roboto font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
-/*Animations*/
+/* Animations */
 @keyframes color-change {
   from {
     fill: #edc655;
@@ -44,7 +44,7 @@
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
-@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 0) {
   .navtoggle li:not(:last-child) {
     display: none;
   }
@@ -52,6 +52,7 @@
   .logo {
     padding-top: 5px;
   }
+
   main {
     padding-top: 53px;
   }
@@ -69,13 +70,14 @@ Medium devices (640px and larger)
   .logo {
     max-width: 150px;
     text-align: center;
-    /*nuovo sotto due righe*/
+
+    /* nuovo sotto due righe */
     display: inline-block;
     padding-top: 20px;
   }
 
-  /*nuovo*/
-  header>div {
+  /* nuovo */
+  header > div {
     max-width: 1200px;
     margin: 0 auto;
   }
@@ -85,15 +87,15 @@ Medium devices (640px and larger)
     justify-content: space-between;
   }
 
-  nav>ul>li {
+  nav > ul > li {
     display: inline-block;
   }
 
-  nav>ul>li:last-child {
+  nav > ul > li:last-child {
     display: none;
   }
 
-  /*fine nuovo*/
+  /* fine nuovo */
   nav {
     width: auto;
     float: right;
@@ -118,10 +120,10 @@ Medium devices (640px and larger)
   }
 
   main {
-  padding-top: 73px;
-  /*era 103*/
-}
+    padding-top: 73px;
 
+    /* era 103 */
+  }
 }
 
 /* ==============================
@@ -142,7 +144,6 @@ Large devices (1024px or larger)
   .navtoggle li:not(:last-child) {
     display: inline-block;
   }
-
 }
 
 /* ==============================
@@ -156,9 +157,9 @@ X-large devices (1440px or larger)
 
 /*
 Colors used:
-Primary Color: #769FCD;
-Secondary Color: #B9D7EA;
-Background Color: #F7FBFC;
+Primary Color: #769fcd;
+Secondary Color: #b9d7ea;
+Background Color: #f7fbfc;
 */
 * {
   box-sizing: border-box;
@@ -167,7 +168,8 @@ Background Color: #F7FBFC;
 /* Layout styling */
 .container {
   padding: 0 15px;
-  /*nuovo sotto due righe*/
+
+  /* nuovo sotto due righe */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -194,18 +196,19 @@ Background Color: #F7FBFC;
 .logo {
   max-width: 250px;
   text-align: center;
-  /*nuovo sotto due righe*/
+
+  /* nuovo sotto due righe */
   display: inline-block;
 }
 
-/*Styles*/
+/* Styles */
 header {
-  background-color: #B9D7EA;
+  background-color: #b9d7ea;
   text-align: center;
-  color: #ffffff;
+  color: #fff;
   padding: 10px 0;
   position: fixed;
-  box-shadow: 2px 2px 10px 0px rgba(40, 40, 40, 0.6);
+  box-shadow: 2px 2px 10px 0 rgba(40, 40, 40, 0.6);
   width: 100%;
 }
 
@@ -213,19 +216,20 @@ header {
   display: inline-block;
   width: 100%;
 } */
-nav>ul {
+nav > ul {
   list-style-type: none;
   padding: 0;
 }
 
-nav>ul>li>a {
+nav > ul > li > a {
   padding: 0 15px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #000000;
+  color: #000;
 }
 
-.navtoggle, .navtoggle.responsive {
+.navtoggle,
+.navtoggle.responsive {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -240,12 +244,12 @@ nav>ul>li>a {
   padding-right: 0;
 }
 
-.navtoggle.responsive li  {
+.navtoggle.responsive li {
   display: block;
 }
 
 #hero {
-  background-color: #B9D7EA;
+  background-color: #b9d7ea;
   padding: 20px 0;
   display: inline-block;
   width: 100%;
@@ -261,15 +265,18 @@ nav>ul>li>a {
 }
 
 body {
-  background-color: #F7FBFC;
+  background-color: #f7fbfc;
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
   line-height: 1.6;
-  color: #000000;
+  color: #000;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   line-height: 1.4;
 }
 
@@ -303,68 +310,68 @@ img {
   height: auto;
 }
 
-/*Links and buttons*/
+/* Links and buttons */
 a {
-  color: #769FCD;
+  color: #769fcd;
   text-decoration: none;
 }
 
 a:hover {
-  color: #769FCD;
+  color: #769fcd;
   text-decoration: underline;
 }
 
 a:active {
-  color: #B9D7EA;
+  color: #b9d7ea;
 }
 
 .button {
   display: inline-block;
-  background-color: #769FCD;
-  color: #ffffff;
+  background-color: #769fcd;
+  color: #fff;
   font-weight: 400;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border: 2px solid #769FCD;
+  border: 2px solid #769fcd;
   transition: opacity 0.2s;
-  box-shadow: 2px 2px 6px 0px rgba(40, 40, 40, 0.5);
+  box-shadow: 2px 2px 6px 0 rgba(40, 40, 40, 0.5);
 }
 
 .button:hover {
   opacity: 0.8;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
 .button:active {
-  background-color: #ffffff;
-  color: #769FCD;
+  background-color: #fff;
+  color: #769fcd;
   opacity: 0.8;
   text-decoration: none;
   padding: 10px;
   border-radius: 3px;
-  border: 2px solid #769FCD;
+  border: 2px solid #769fcd;
 }
 
 .button.contact {
   background-color: transparent;
-  color: #769FCD;
+  color: #769fcd;
   text-decoration: none;
   text-transform: uppercase;
-  border: 2px solid #B9D7EA;
+  border: 2px solid #b9d7ea;
   margin-bottom: 15px;
 }
 
 .button.contact:hover {
-  background-color: #B9D7EA;
+  background-color: #b9d7ea;
   opacity: 0.8;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 }
 
 .button.contact:active {
-  background-color: #ffffff;
-  color: #769FCD;
+  background-color: #fff;
+  color: #769fcd;
   text-decoration: none;
 }
